@@ -32,4 +32,8 @@ while snake_is_alive:
         scoreboard.add_point()
         food.refresh()
 
+    # Detect collision with wall.
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        snake_is_alive = False
+
 screen.exitonclick()
